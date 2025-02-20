@@ -130,4 +130,3 @@ Retrieve and submit the flag.
 
 ---
 
-### 🐱 Cyber Cat Says...
